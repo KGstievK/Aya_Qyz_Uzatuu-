@@ -1,0 +1,23 @@
+.Gps {
+  width: 100%;
+  height: auto;
+  background-color: #28313A;
+  color: #FFF;
+  padding: 30px;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    h1 {
+      font-size: 64px;
+      font-weight: 550;
+    }
+    p {
+      width: 400px;
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+}
