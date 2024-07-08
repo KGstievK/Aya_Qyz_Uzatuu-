@@ -1,0 +1,26 @@
+.Guest {
+  .content {
+    h1 {
+      text-align: center;
+      margin: 20px;
+      font-size: 36px;
+    }
+    table {
+      width: 100%;
+      border: 1px solid grey;
+      th {
+        border: 1px solid gray;
+        h2 {
+          font-size: 20px;
+        }
+      }
+      td {
+        border: 1px solid grey;
+        padding: 0 0px 0 20px;
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

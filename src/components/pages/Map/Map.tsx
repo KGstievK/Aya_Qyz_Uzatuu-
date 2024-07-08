@@ -1,5 +1,4 @@
 import scss from './Map.module.scss'
-import Maps from '../../maps/Maps'
 const Map = () => {
   return (
     <section className={scss.Map}>

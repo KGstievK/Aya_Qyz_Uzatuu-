@@ -51,27 +51,35 @@ const Timer: React.FC = () => {
     <section className={scss.Timer}>
       <div className="container">
         <div className={scss.content}>
-          <h1>До свадьбы</h1>
+          <div className={scss.titlee}>
+            <div className={scss.line}></div>
+            <h1>До свадьбы</h1>
+            <div className={scss.line}></div>
+          </div>
           <div className={scss.ourDay}>
-            <h1 className={oswald.className}>
-              {timeLeft.days}{" "}
-              <span className={playfair_display.className}>Дней</span>
-            </h1>
-            <span>:</span>
-            <h1 className={oswald.className}>
-              {timeLeft.hours}{" "}
-              <span className={playfair_display.className}>Часов</span>
-            </h1>
-            <span>:</span>
-            <h1 className={oswald.className}>
-              {timeLeft.minutes}{" "}
-              <span className={playfair_display.className}>Минут</span>
-            </h1>
-            <span>:</span>
-            <h1 className={oswald.className}>
-              {timeLeft.seconds}{" "}
-              <span className={playfair_display.className}>Секунд</span>
-            </h1>
+            <div className={scss.Rhombus}></div>
+            <div className={scss.time}>
+              <h1 className={oswald.className}>
+                {timeLeft.days}{" "}
+                <span className={playfair_display.className}>Дней</span>
+              </h1>
+              <span>:</span>
+              <h1 className={oswald.className}>
+                {timeLeft.hours}{" "}
+                <span className={playfair_display.className}>Часов</span>
+              </h1>
+              <span>:</span>
+              <h1 className={oswald.className}>
+                {timeLeft.minutes}{" "}
+                <span className={playfair_display.className}>Минут</span>
+              </h1>
+              <span>:</span>
+              <h1 className={oswald.className}>
+                {timeLeft.seconds}{" "}
+                <span className={playfair_display.className}>Секунд</span>
+              </h1>
+            </div>
+            <div className={scss.Rhombus}></div>
           </div>
         </div>
       </div>

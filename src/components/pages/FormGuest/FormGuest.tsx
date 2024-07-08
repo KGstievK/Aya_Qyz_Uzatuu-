@@ -43,11 +43,11 @@ const FormGuest = () => {
             <input type="text" placeholder='Ваше Имя и Фамилия' {...register("name", {required: true})} />
             <p>Подтверждение присутствия</p>
             <div className={scss.radio}>
-              <input  type="radio" value="Приду" {...register("dev", {required: true})} />
+              <input  type="radio" value="Приду✅" {...register("dev", {required: true})} />
               <p>Приду</p>
             </div>
             <div className={scss.radio}>
-              <input  type="radio" value="Не смогу" {...register("dev", {required: true})}/>
+              <input  type="radio" value="Не смогу❌" {...register("dev", {required: true})}/>
               <p>Не смогу</p>
             </div>
             <input type="text" placeholder='Если будете с парой, просьба указать имя' {...register("partner", {required: true})} />

@@ -1,0 +1,56 @@
+.Welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #191E24;
+  height: 100vh;
+  color: #E8E9E3;
+  @media (max-width: 376px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #191E24;
+    height: 100vh;
+    color: #E8E9E3;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    .We {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .img {
+        position: relative;
+        display: flex;
+        align-items: center;
+        z-index: 5;
+        &:nth-child(1) {
+          transform: scale(-1, 1) ;
+          object-fit: cover;
+        }
+        &:nth-child(3) {
+          object-fit: cover;
+        }
+      }
+      .We_name {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        z-index: 0;
+        .line {
+          width: 100px;
+          height: 2px;
+          background: #E8E9E3;
+          color: #E8E9E3;
+        }
+      }
+    }
+    h1 {
+      font-size: 98px;
+    }
+  }
+}

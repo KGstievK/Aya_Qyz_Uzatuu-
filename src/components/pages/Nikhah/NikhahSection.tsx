@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import scss from './NikhahSection.module.scss'
+import floral1 from '@/assets/floral-hand-drawn-ornament-collection_1.svg'
 import floral2 from '@/assets/floral-hand-drawn-ornament-collection_2.svg'
-import Vector from '@/assets/Vector.svg'
-import { Oswald, Noto_Sans} from "next/font/google";
+import { Oswald, Noto_Sans } from "next/font/google";
 const oswald = Oswald({ subsets: ["latin"] });
-const montserrat = Noto_Sans({ subsets: ["latin"] });
+const noto_Sans = Noto_Sans({ subsets: ["latin"] });
 
 const NikhahSection = () => {
   return (
@@ -16,10 +16,10 @@ const NikhahSection = () => {
           В этот день мы хотим пригласить вас, чтобы вы разделили радость в самый лучший и трогательный день нашей жизни!
           </p>
           <div className={scss.name}>
-            <Image className={scss.img} priority src={floral2} alt='flora-1'/>
+            <Image className={scss.img} priority src={floral1} alt='flora-1'/>
             <div className={scss.we}>
               <h1>Кудайберген</h1>
-              <p className={montserrat.className}>&</p>
+              <p className={noto_Sans.className}>&</p>
               <h1>Бурул</h1>
               <div className={scss.date}>
                 <h2 className={oswald.className}>АВГУСТ</h2>
@@ -32,6 +32,19 @@ const NikhahSection = () => {
             </div>
             <Image className={scss.img} src={floral2} alt='flora-1'/>
           </div>
+          <div className={scss.name}>
+            <div className={scss.we}>
+              <div className={scss.dateCopy}>
+                <h2 className={oswald.className}>АВГУСТ</h2>
+                <div className={scss.day}>
+                <h3 className={oswald.className}>8</h3>
+                <p className={oswald.className}>2024</p>
+                </div>
+                <h2 className={oswald.className}>ЧЕТВЕРГ</h2>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>
