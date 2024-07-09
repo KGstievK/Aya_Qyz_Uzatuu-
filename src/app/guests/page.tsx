@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import Guest from "@/components/pages/Guest/Guest"
+import GuestData from "@/components/pages/Guest/GuestData";
 
 const page = () => {
   return (
     <div>
-      <Guest/>
+      <GuestData />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;

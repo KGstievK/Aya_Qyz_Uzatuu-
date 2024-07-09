@@ -38,11 +38,11 @@
       align-items: center;
       justify-content: center;
       margin-top: 50px;
+      gap: 80px;
       .Rhombus {
         max-width: 50px;
         width: 100%;
         height: 50px;
-        min-height: 25px;
         background-color: #FFF;
         transform: rotate(45deg);
         @media (max-width: 794px) {
@@ -50,13 +50,14 @@
         }
       }
       .time {
-        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 20px;
         @media (max-width: 400px) {
           gap: 10px;
+          width: 100%;
+
         }
         h1 {
           width: 100px;
