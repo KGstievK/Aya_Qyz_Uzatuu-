@@ -2,9 +2,9 @@ import Image from 'next/image'
 import scss from './NikhahSection.module.scss'
 import floral1 from '@/assets/floral-hand-drawn-ornament-collection_1.svg'
 import floral2 from '@/assets/floral-hand-drawn-ornament-collection_2.svg'
-import { Oswald, Noto_Sans } from "next/font/google";
+import { Oswald, Bodoni_Moda } from "next/font/google";
 const oswald = Oswald({ subsets: ["latin"] });
-const noto_Sans = Noto_Sans({ subsets: ["latin"] });
+const bodoni_Moda = Bodoni_Moda({ subsets: ["latin"] });
 
 const NikhahSection = () => {
   return (
@@ -19,7 +19,7 @@ const NikhahSection = () => {
             <Image className={scss.img} priority src={floral1} alt='flora-1'/>
             <div className={scss.we}>
               <h1>Кудайберген</h1>
-              <p className={noto_Sans.className}>&</p>
+              <p className={bodoni_Moda.className}>&</p>
               <h1>Бурул</h1>
               <div className={scss.date}>
                 <h2 className={oswald.className}>АВГУСТ</h2>

@@ -9,12 +9,7 @@ interface IWelcome {
   setAnimation: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Welcome: FC<IWelcome> = ({ setAnimation }) => {
-  useEffect(() => {
-    setTimeout(() => {
-      setAnimation(true);
-    }, 3000);
-  }, []);
+const Welcome: FC= () => {
 
   return (
     <section className={scss.Welcome} >
@@ -35,7 +30,7 @@ const Welcome: FC<IWelcome> = ({ setAnimation }) => {
             </div>
             <Image className={scss.img} priority src={folor_2} alt="flora-1" />
           </div>
-          <h1>Добро пожаловать</h1>
+          <h1>ЧАКЫРУУ</h1>
         </div>
       </div>
     </section>
