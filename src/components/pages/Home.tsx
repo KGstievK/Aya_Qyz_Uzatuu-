@@ -6,7 +6,10 @@ import Timer from "./Timer/Timer"
 
 const Home = () => {
   return (
-    <div>
+    <div style={{
+      zIndex: '1',
+      position: 'relative'
+    }}>
       <NikhahSection/>
       <Timer/>
       <FormGuest/>

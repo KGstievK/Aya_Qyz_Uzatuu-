@@ -1,7 +1,7 @@
 .NikhahSection {
   width: 100%;
   height: auto;
-  padding: 30px;
+  padding: clamp(15px, 2vw, 30px);
   background-color: #E8E9E3;
   .content {
     display: flex;
@@ -10,13 +10,13 @@
     justify-content: center;
     width: 100%;
     border: 5px solid #28313A; 
-    padding: 25px;
+    padding: clamp(10px, 2vw, 25px);
     h1 {
       width: 100%;
       color: #28313A;
       font-size: clamp(32px, 5vw, 64px);
       font-weight: 550;
-      margin-top: 110px;
+      margin-top: 100px;
       text-align: center;
     }
     p {
@@ -26,8 +26,7 @@
       font-size: clamp(16px, 3vw, 24px);
       font-weight: 350;
       text-align: center;
-      margin-top: clamp(32px, 6vw, 110px);
-      margin-bottom: 110px;
+      margin: clamp(32px, 6vw, 100px);
     }
     .name {
       position: relative;
@@ -37,18 +36,22 @@
       max-width: 800px;
       width: 100%;
       max-height: 100vh;
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
       .img {
         position: relative;
-        width: (70px, 8vw, 300px);
-        height: clamp(155px, 9vw, 340px);
+        max-width: 400px;
+        width: 100%;
+        height: 22vw;
 
         color: #28313A;
         &:nth-child(1) {
-          transform: translate(50px);
+          transform: translate(25px);
         }
         &:nth-child(3) {
-          transform: translate(-50px);
+          transform: translate(-25px);
+        }
+        @media (max-width: 682px) {
+          height: 150px; 
         }
       }
       .we {
@@ -60,19 +63,14 @@
           color: #28313A;
           margin: 0;
           text-align: center;
-          font-size: clamp(24px, 5vw, 52px);
-          @media (max-width: 793px) {
-           
-          }
+          font-size: clamp(24px, 3vw, 52px);
+      
         }
         p {
-          font-size: clamp(24px, 6vw, 52px);
+          font-size: clamp(24px, 3vw, 52px);
           font-weight: 450;
           padding: 0;
           margin: 0;
-          @media (max-width: 793px) {
-            
-          }
         }
         .date {
           display: flex;
@@ -85,7 +83,7 @@
             border-top: 2px solid #28313A;
             border-bottom: 2px solid #28313A;
             text-align: center;
-            font-size: 32px;
+            font-size: clamp(18px, 2vw, 32px);
             font-weight: 300;
           }
           .day {
@@ -99,7 +97,7 @@
             border-left: 2px solid #28313A;
             border-right: 2px solid #28313A;
             h3 {
-              font-size: 42px;
+              font-size: clamp(28px, 3vw,42px);
               font-weight: 300;
               text-align: center;
             }
@@ -107,10 +105,10 @@
               height: auto;
               margin: 0;
               text-align: center;
-              font-size: 24px;
+              font-size: clamp(14px, 2vw, 24px);
             }
           }
-          @media (max-width: 793px) {
+          @media (max-width: 1051px) {
             display: none;
           }
         }
@@ -126,7 +124,7 @@
             border-top: 1px solid #28313A;
             border-bottom: 1px solid #28313A;
             text-align: center;
-            font-size: clamp(24px, 3vw, 32px);
+            font-size: clamp(18px, 2vw, 32px);
             font-weight: 300;
           }
           .day {
@@ -139,7 +137,7 @@
             border-left: 1px solid #28313A;
             border-right: 1px solid #28313A;
             h3 {
-              font-size: 42px;
+              font-size: clamp(28px, 3vw,42px);
               font-weight: 300;
               text-align: center;
             }
@@ -147,10 +145,10 @@
               height: auto;
               margin: 0;
               text-align: center;
-              font-size: 24px;
+              font-size: clamp(14px, 2vw, 24px);
             }
           }
-          @media (min-width: 794px) {
+          @media (min-width: 1052px) {
             display: none;
           }
         }

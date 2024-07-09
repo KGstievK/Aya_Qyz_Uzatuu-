@@ -3,7 +3,7 @@
   height: auto;
   background-color: #28313A;
   color: #FFF;
-  padding: 30px;
+  padding: clamp(15px, 2vw, 30px);
   .content {
     display: flex;
     align-items: center;
@@ -37,7 +37,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 50px;
+      margin-top: clamp(20px, 2vw, 50px);
       gap: 80px;
       .Rhombus {
         max-width: 50px;
@@ -45,7 +45,7 @@
         height: 50px;
         background-color: #FFF;
         transform: rotate(45deg);
-        @media (max-width: 794px) {
+        @media (max-width: 844px) {
           display: none;
         }
       }
@@ -54,7 +54,7 @@
         align-items: center;
         justify-content: center;
         gap: 20px;
-        @media (max-width: 400px) {
+        @media (max-width: 550px) {
           gap: 10px;
           width: 100%;
 

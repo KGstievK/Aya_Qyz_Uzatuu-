@@ -1,7 +1,7 @@
 .FormGuest {
   width: 100%;
   height: auto;
-  padding: 30px;
+  padding: clamp(15px, 2vw, 30px);
   background-color: #E8E9E3;
   .content {
     display: flex;
@@ -13,7 +13,7 @@
     padding: 60px 0;
     h1 {
       width: 100%;
-      font-size: clamp(36px, 6vw, 64px);
+      font-size: clamp(30px, 6vw, 64px);
       font-weight: 550;
       text-align: center;
     }
