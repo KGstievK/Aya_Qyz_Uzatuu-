@@ -7,23 +7,14 @@ import { usePathname } from "next/navigation";
 
 const page = () => {
   const [animation, setAnimation] = React.useState(false);
-
-  const pathname = usePathname();
-
-  if (pathname === "/" && animation === false) {
+  
     return (
       <div>
         <Welcome setAnimation={setAnimation} />
         <Home/>
       </div>
       )
-    } else {
-      return (
-      <div>
-        <Home />
-      </div>
-      ) 
-    }
+   
 };  
 
 export default page;
