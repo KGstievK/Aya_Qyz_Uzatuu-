@@ -8,10 +8,7 @@ import Welcome from "./Welcome/Welcome"
 
 const Home = () => {
   return (
-    <div style={{
-      zIndex: '1',
-      position: 'relative'
-    }}>
+    <div>
       <Welcome />
       <NikhahSection/>
       <Timer/>
