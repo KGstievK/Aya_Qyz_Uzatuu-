@@ -27,7 +27,7 @@ const NikhahSection = () => {
                 <h3 className={oswald.className}>8</h3>
                 <p className={oswald.className}>2024</p>
                 </div>
-                <h2 className={oswald.className}>ЧЕТВЕРГ</h2>
+                <h2 className={oswald.className}>БЕЙШЕМБИ</h2>
               </div>
             </div>
             <Image className={scss.img} src={floral2} alt='flora-1'/>
