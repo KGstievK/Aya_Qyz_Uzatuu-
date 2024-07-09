@@ -11,9 +11,9 @@ const NikhahSection = () => {
     <section className={scss.NikhahSection}>
       <div className="container">
         <div className={scss.content}>
-          <h1>Наша свадьба</h1>
+          <h1>УРМАТТУУ</h1>
           <p>
-          В этот день мы хотим пригласить вас, чтобы вы разделили радость в самый лучший и трогательный день нашей жизни!
+          СИЗДЕРДИ УУЛУБУЗ КУДАЙБЕРГЕН КЕЛИНИБИЗ БУРУЛДУН ҮЙЛӨНҮҮ ТОЮНУНУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ
           </p>
           <div className={scss.name}>
             <Image className={scss.img} priority src={floral1} alt='flora-1'/>
@@ -40,7 +40,7 @@ const NikhahSection = () => {
                 <h3 className={oswald.className}>8</h3>
                 <p className={oswald.className}>2024</p>
                 </div>
-                <h2 className={oswald.className}>ЧЕТВЕРГ</h2>
+                <h2 className={oswald.className}>БЕЙШЕМБИ</h2>
               </div>
             </div>
           </div>

@@ -1,3 +1,4 @@
+import Dad from "./Dad/Dad"
 import FormGuest from "./FormGuest/FormGuest"
 import Gps from "./Gps/Gps"
 import Map from "./Map/Map"
@@ -17,6 +18,7 @@ const Home = () => {
       <FormGuest/>
       <Gps/>
       <Map/>
+      <Dad/>
     </div>
 
   )

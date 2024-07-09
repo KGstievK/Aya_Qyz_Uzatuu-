@@ -3,17 +3,18 @@
   height: auto;
   padding: clamp(15px, 2vw, 30px);
   background-color: #E8E9E3;
+  color: #364d65;
   .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    border: 5px solid #28313A; 
+    border: 5px solid #364d65; 
     padding: clamp(10px, 2vw, 25px);
     h1 {
       width: 100%;
-      color: #28313A;
+      color: #364d65;
       font-size: clamp(32px, 5vw, 64px);
       font-weight: 550;
       margin-top: 100px;
@@ -22,7 +23,6 @@
     p {
       max-width: 400px;
       width: 100%;
-      color: #28313A;
       font-size: clamp(16px, 3vw, 24px);
       font-weight: 350;
       text-align: center;
@@ -60,7 +60,6 @@
         align-items: center;
         justify-content: flex-start;
         h1{
-          color: #28313A;
           margin: 0;
           text-align: center;
           font-size: clamp(24px, 3vw, 52px);
@@ -80,8 +79,8 @@
           margin-top:20px ;
           h2 {
             width: 100px;
-            border-top: 2px solid #28313A;
-            border-bottom: 2px solid #28313A;
+            border-top: 2px solid #364d65;
+            border-bottom: 2px solid #364d65;
             text-align: center;
             font-size: clamp(18px, 2vw, 32px);
             font-weight: 300;
@@ -94,8 +93,8 @@
             padding: 0 10px;
             height: 100px;
             // gap: ;
-            border-left: 2px solid #28313A;
-            border-right: 2px solid #28313A;
+            border-left: 2px solid #364d65;
+            border-right: 2px solid #364d65;
             h3 {
               font-size: clamp(28px, 3vw,42px);
               font-weight: 300;

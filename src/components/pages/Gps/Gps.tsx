@@ -5,8 +5,8 @@ const Gps = () => {
     <section className={scss.Gps}>
       <div className="container">
         <div className={scss.content}>
-          <h1>Место Торжества</h1>
-          <p>Город Талас, Чингиз Айтматова 246</p>
+          <h1>ДАРЕГИ:</h1>
+          <p>ТАЛАС ШААРЫ, ЧЫНГЫЗ АЙТМАТОВ КӨЧӨСҮ, 246</p>
         </div>
       </div>
     </section>

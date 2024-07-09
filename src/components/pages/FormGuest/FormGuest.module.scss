@@ -3,13 +3,14 @@
   height: auto;
   padding: clamp(15px, 2vw, 30px);
   background-color: #E8E9E3;
+  color: #364d65;
   .content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    border: 5px solid #28313A; 
+    border: 5px solid #364d65; 
     padding: 60px 0;
     h1 {
       width: 100%;
@@ -38,7 +39,7 @@
         width: 100%;
         font-size: 16px;
         border: none;
-        border-bottom: 2px solid #28313A;
+        border-bottom: 2px solid #364d65;
         padding: 20px 0;
         background: transparent;
         outline: none;
@@ -59,7 +60,7 @@
           max-width: 20px;
           width: 100% ;
           outline: none;
-          border: 2px solid #28313A
+          border: 2px solid #364d65
         };
         p {
           height: 20px;
@@ -68,10 +69,10 @@
         }
       }
       button {
-        background-color: #28313A;
+        background-color: #364d65;
         width: 160px;
         height: 50px;
-        border: 2px solid #28313A;
+        border: 2px solid #364d65;
         border-radius: 20px;
         color: #FFF;
         margin: 20px;
