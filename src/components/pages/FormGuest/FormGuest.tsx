@@ -5,10 +5,10 @@ import axios from 'axios'
 
 interface FormType {
   _id?: number,
-  name: string,
+  name?: string,
   dev: string,
-  partner: string,
-  comment: string,
+  partner?: string,
+  comment?: string,
 }
 
 const url = process.env.NEXT_PUBLIC_API_URL
@@ -37,22 +37,22 @@ const FormGuest = () => {
     <section className={scss.FormGuest}>
       <div className="container">
         <div className={scss.content}>
-          <h1>Анкета гостя</h1>
-          <p>Пожалуйста ответьте на несколько вопросов и подтвердите свое присутствие</p>
+          <h1>КОНОКТУН АНКЕТАСЫ</h1>
+          <p>Сураныч, бир нече суроолорго жооп берип, катышууңузду ырастаңыз</p>
           <form action="" onSubmit={handleSubmit(onSubmit)}>
-            <input type="text" placeholder='Ваше Имя и Фамилия' {...register("name", {required: true})} />
-            <p>Подтверждение присутствия</p>
+            <input type="text" placeholder='Сиздин аты-жөнүңүс' {...register("name", {required: true})} />
+            <p>ТАКТОО</p>
             <div className={scss.radio}>
               <input  type="radio" value="Приду✅" {...register("dev", {required: true})} />
-              <p>Приду</p>
+              <p>КЕЛЕМ</p>
             </div>
             <div className={scss.radio}>
               <input  type="radio" value="Не смогу❌" {...register("dev", {required: true})}/>
-              <p>Не смогу</p>
+              <p>КЕЛЕ АЛБАЙМ</p>
             </div>
-            <input type="text" placeholder='Если будете с парой, просьба указать имя' {...register("partner", {required: true})} />
-            <input type="text" placeholder='Если у вас есть комментарии, напишите' {...register("comment", {required: true})} />
-            <button type='submit'>ПОДТВЕРДИТЬ</button>
+            <input type="text" placeholder='Сиз ким менен келесиз, аты-жөнүн жазып коюңуз' {...register("partner", {required: true})} />
+            <input type="text" placeholder='Эгер суроолоруңуз болсо жазып коюңуз' {...register("comment", {required: true})} />
+            <button type='submit'>ЖӨНӨТҮҮ</button>
           </form>
         </div>
       </div>

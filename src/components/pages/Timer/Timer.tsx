@@ -61,22 +61,22 @@ const Timer: React.FC = () => {
             <div className={scss.time}>
               <h1 className={oswald.className}>
                 {timeLeft.days}{" "}
-                <span className={playfair_display.className}>Дней</span>
+                <span className={playfair_display.className}>КҮН</span>
               </h1>
               <span>:</span>
               <h1 className={oswald.className}>
                 {timeLeft.hours}{" "}
-                <span className={playfair_display.className}>Часов</span>
+                <span className={playfair_display.className}>СААТ</span>
               </h1>
               <span>:</span>
               <h1 className={oswald.className}>
                 {timeLeft.minutes}{" "}
-                <span className={playfair_display.className}>Минут</span>
+                <span className={playfair_display.className}>МИНУТА</span>
               </h1>
               <span>:</span>
               <h1 className={oswald.className}>
                 {timeLeft.seconds}{" "}
-                <span className={playfair_display.className}>Секунд</span>
+                <span className={playfair_display.className}>СЕКУНДА</span>
               </h1>
             </div>
             <div className={scss.Rhombus}></div>
