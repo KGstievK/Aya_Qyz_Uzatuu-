@@ -3,16 +3,22 @@ import Image from "next/image";
 import scss from "./Welcome.module.scss";
 import folor from "@/assets/Rectangle_2.svg";
 import folor_2 from "@/assets/Rectangle_2.svg";
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 
-interface IWelcome {
-  setAnimation: React.Dispatch<React.SetStateAction<boolean>>;
-}
 
 const Welcome: FC= () => {
+  const [animation, setAnimation] = useState<boolean>(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setAnimation(true);
+    }, 3000);
+  }, []);
 
   return (
-    <section className={scss.Welcome} >
+    <section className={scss.Welcome} style={{
+      display: !animation ? "flex" : "none"
+    }} >
       <div className="container">
         <div className={scss.content}>
           <div className={scss.We}>

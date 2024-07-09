@@ -1,3 +1,5 @@
+"use client"
+import { SetStateAction } from "react"
 import Dad from "./Dad/Dad"
 import FormGuest from "./FormGuest/FormGuest"
 import Gps from "./Gps/Gps"
