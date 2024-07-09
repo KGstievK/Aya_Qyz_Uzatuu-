@@ -1,0 +1,31 @@
+.Dad {
+  width: 100%;
+  height: auto;
+  background-color: #364d65;
+  color: #FFF;
+  padding: clamp(15px, 2vw, 30px);
+  .content {
+    @font-face {
+      font-family: 'Andantino-script' ;
+      src: url('../../../assets/Fonts/ofont.ru_Andantino_script.ttf');
+      font-weight: 400;
+      font-style: italic;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+     p {
+      max-width: 600px;
+      width: 100%;
+      font-size: clamp(16px, 3vw, 24px);
+      text-align: center;
+    }
+    h2 {
+      font-family: 'Andantino-script';
+      font-size: clamp(30px, 5vw, 74px);
+      font-weight: 350;
+    }
+  }
+}
