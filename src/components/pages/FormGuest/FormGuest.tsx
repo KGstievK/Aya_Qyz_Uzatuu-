@@ -2,6 +2,7 @@
 import { SubmitHandler, useForm } from 'react-hook-form'
 import scss from './FormGuest.module.scss'
 import axios from 'axios'
+import { useEffect } from 'react'
 
 interface FormType {
   _id?: number,
@@ -29,9 +30,10 @@ const FormGuest = () => {
         'Content-Type': "application/json"
       }
     })
+    window.location.reload()
     console.log(data)
   }
-
+ 
 
   return (
     <section className={scss.FormGuest}>
