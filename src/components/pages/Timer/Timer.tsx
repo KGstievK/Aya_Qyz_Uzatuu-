@@ -53,7 +53,7 @@ const Timer: React.FC = () => {
         <div className={scss.content}>
           <div className={scss.titlee}>
             <div className={scss.line}></div>
-            <h1>До свадьбы</h1>
+            <h1>ТОЙГО ЧЕЙИН</h1>
             <div className={scss.line}></div>
           </div>
           <div className={scss.ourDay}>

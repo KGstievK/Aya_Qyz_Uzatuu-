@@ -13,7 +13,7 @@ const NikhahSection = () => {
         <div className={scss.content}>
           <h1>УРМАТТУУ</h1>
           <p>
-          СИЗДЕРДИ УУЛУБУЗ КУДАЙБЕРГЕН КЕЛИНИБИЗ БУРУЛДУН ҮЙЛӨНҮҮ ТОЮНУНУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ
+            КАДЫРЛУУ КОНОГУБУЗ СИЗДЕРДИ УУЛУБУЗ КУДАЙБЕРГЕН КЕЛИНИБИЗ БУРУЛДУН ҮЙЛӨНҮҮ ТОЮНУНУН ЧАКЫРАБЫЗ
           </p>
           <div className={scss.name}>
             <Image className={scss.img} priority src={floral1} alt='flora-1'/>

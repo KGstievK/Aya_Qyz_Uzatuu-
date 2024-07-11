@@ -8,10 +8,13 @@
   height: 100vh;
   color: #E8E9E3;
   z-index: 0;
-  animation: welcome 3s;
+  animation: welcome 2s;
   opacity: 0;
   @keyframes welcome {
     0% {
+      opacity: 1;
+    }
+    50% {
       opacity: 1;
     }
    

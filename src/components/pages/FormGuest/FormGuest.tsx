@@ -2,27 +2,23 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import scss from "./FormGuest.module.scss";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
 interface FormType {
   _id?: number;
   name?: string;
-  dev: string;
   partner?: string;
+  dev: string;
   comment?: string;
 }
 
 const url = process.env.NEXT_PUBLIC_API_URL;
 
 const FormGuest = () => {
+  const [star, setStar] = useState<FormType | null>(null)
   const { register, handleSubmit } = useForm<FormType>({});
   const onSubmit: SubmitHandler<FormType> = async (FormData) => {
-    const guestData = {
-      name: FormData.name,
-      dev: FormData.dev,
-      partner: FormData.partner,
-      comment: FormData.comment,
-    };
-    const { data } = await axios.post(`${url}/wedding_v1`, guestData, {
+    const { data } = await axios.post(`${url}/wedding_v1`, FormData, {
       headers: {
         Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
@@ -30,6 +26,7 @@ const FormGuest = () => {
     });
     window.location.reload();
     console.log(data);
+    setStar(data)  
   };
 
   return (

@@ -1,26 +1,55 @@
-.Guest {
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  margin: 0 auto;
   .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
     width: 100%;
     h1 {
       text-align: center;
       margin: 20px;
-      font-size: 36px;
+      font-size: clamp(24px, 2vw, 36px);
     }
     table {
       width: 100%;
       border: 1px solid grey;
-      th {
+      border-collapse: collapse;
+      thead {
         border: 1px solid gray;
-        h2 {
-          font-size: 20px;
+        th {
+          padding: 10px;
+          border: 1px solid gray;
+          h2 {
+            font-size: clamp(16px, 3vw, 20px);
+          }
+        }
+        td {
+          border: 1px solid grey;
+          p {
+            font-size: clamp(14px, 2vw, 18px);
+          }
         }
       }
-      td {
+      tbody {
+        width: 100%;
         border: 1px solid grey;
-        padding: 0 0px 0 20px;
-        p {
-          font-size: 18px;
+        tr {
+          width: 100%;
+          border: 1px solid grey;
+          td {
+            // width: 100%;
+            padding: 10px;
+            border: 1px solid grey;
+            p {
+              font-size: 16px;
+            }
+          }
         }
       }
     }
