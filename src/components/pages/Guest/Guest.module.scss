@@ -1,4 +1,4 @@
-.page {
+.guest {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,41 +13,36 @@
     width: 100%;
     h1 {
       text-align: center;
-      margin: 20px;
+      margin: clamp(5px, 2vw, 20px);
       font-size: clamp(24px, 2vw, 36px);
     }
     table {
       width: 100%;
-      border: 1px solid grey;
       border-collapse: collapse;
       thead {
-        border: 1px solid gray;
         th {
-          padding: 10px;
+          padding: clamp(5px, 2vw, 20px);
           border: 1px solid gray;
           h2 {
-            font-size: clamp(16px, 3vw, 20px);
+            font-size: clamp(14px, 3vw, 20px);
           }
         }
         td {
-          border: 1px solid grey;
-          p {
+            p {
             font-size: clamp(14px, 2vw, 18px);
           }
         }
       }
       tbody {
         width: 100%;
-        border: 1px solid grey;
         tr {
           width: 100%;
-          border: 1px solid grey;
           td {
             // width: 100%;
-            padding: 10px;
+            padding: clamp(5px, 2vw, 20px);
             border: 1px solid grey;
             p {
-              font-size: 16px;
+              font-size: clamp(14px, 2vw, 18px);
             }
           }
         }
