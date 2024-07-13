@@ -16,7 +16,8 @@
       margin: clamp(5px, 2vw, 20px);
       font-size: clamp(24px, 2vw, 36px);
     }
-    table {
+    form {
+      table {
       width: 100%;
       border-collapse: collapse;
       thead {
@@ -37,12 +38,35 @@
         width: 100%;
         tr {
           width: 100%;
+          
           td {
             // width: 100%;
-            padding: clamp(5px, 2vw, 20px);
+            height: 70px;
             border: 1px solid grey;
+              padding: 0;
+              input {
+                padding: clamp(5px, 2vw, 20px); 
+                border: none;
+                font-size: 16px;
+              }
+            }
             p {
-              font-size: clamp(14px, 2vw, 18px);
+              font-size: clamp(14px, 2vw, 20px);
+              margin: clamp(5px, 2vw, 20px);
+              strong {
+                font-style: italic;
+              }
+            }
+            button {
+              min-width: 30px;
+              width: 100%;
+              border: none;
+              background: transparent;
+              font-size: 16px ;
+              font-weight: 500;
+              margin: 5px;
+              transition: .3s;
+              border-radius: 5px;
             }
           }
         }

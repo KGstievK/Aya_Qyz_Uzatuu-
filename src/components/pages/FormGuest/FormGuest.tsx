@@ -3,13 +3,13 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import scss from "./FormGuest.module.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { error } from "console";
 
 interface FormType {
   _id?: number;
   name?: string;
-  partner?: string;
+  partner?: string
   dev: string;
-  comment?: string;
 }
 
 const url = process.env.NEXT_PUBLIC_API_URL;
@@ -18,15 +18,37 @@ const FormGuest = () => {
   const [star, setStar] = useState<FormType | null>(null)
   const { register, handleSubmit } = useForm<FormType>({});
   const onSubmit: SubmitHandler<FormType> = async (FormData) => {
-    const { data } = await axios.post(`${url}/wedding_v1`, FormData, {
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-    });
-    window.location.reload();
-    console.log(data);
-    setStar(data)  
+    try {
+      const nameData = {
+        id: FormData._id,
+        name: FormData.name,
+        dev: FormData.dev
+      }
+      const partnerData = {
+        id: FormData._id,
+        partner: FormData.partner,
+        dev: FormData.dev
+      }
+      const { data: responseName } = await axios.post(`${url}/wedding_v1`, nameData, {
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+      });
+      const { data: responsePartner } = await axios.post(`${url}/wedding_v1`, partnerData, {
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+      });
+      
+      window.location.reload();
+      console.log(responseName);
+      setStar(responseName)  
+    } catch (e) {
+      console.error(e);
+      
+    }
   };
 
   return (
@@ -38,8 +60,13 @@ const FormGuest = () => {
           <form action="" onSubmit={handleSubmit(onSubmit)}>
             <input
               type="text"
-              placeholder="Сиздин аты-жөнүңүс"
+              placeholder="Сиздин аты-жөнүңүз"
               {...register("name", { required: true })}
+            />
+            <input
+              type="text"
+              placeholder="Жаарыңыздын аты-жөнү"
+              {...register("partner", { required: false })}
             />
             <p>ТАКТОО</p>
             <div className={scss.radio}>
@@ -58,16 +85,6 @@ const FormGuest = () => {
               />
               <p>КЕЛЕ АЛБАЙМ</p>
             </div>
-            <input
-              type="text"
-              placeholder="Сиз ким менен келесиз, аты-жөнүн жазып коюңуз"
-              {...register("partner", { required: false })}
-            />
-            <input
-              type="text"
-              placeholder="Эгер суроолоруңуз болсо жазып коюңуз"
-              {...register("comment", { required: false })}
-            />
             <button type="submit">ЖӨНӨТҮҮ</button>
           </form>
         </div>
