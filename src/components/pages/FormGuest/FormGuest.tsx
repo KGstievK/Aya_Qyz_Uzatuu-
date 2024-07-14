@@ -3,7 +3,6 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import scss from "./FormGuest.module.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { error } from "console";
 
 interface FormType {
   _id?: number;
@@ -14,14 +13,21 @@ interface FormType {
 
 const TOKEN = process.env.NEXT_PUBLIC_TELEGRAM_TOKEN;
 const CHAT_ID = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
-
 const url = process.env.NEXT_PUBLIC_API_URL;
 
 const FormGuest = () => {
-  const show = Boolean(JSON.parse(String(localStorage.getItem("show"))));
-  const user = JSON.parse(String(localStorage.getItem("name")));
+  const [show, setShow] = useState(false);
+  const [user, setUser] = useState<FormType | null>(null);
   const [star, setStar] = useState<FormType | null>(null);
   const { register, handleSubmit } = useForm<FormType>({});
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setShow(JSON.parse(String(localStorage.getItem("show"))));
+      setUser(JSON.parse(String(localStorage.getItem("name"))));
+    }
+  }, []);
+
   const onSubmit: SubmitHandler<FormType> = async (FormData) => {
     try {
       const nameData = {
@@ -34,26 +40,18 @@ const FormGuest = () => {
         partner: FormData.partner,
         dev: FormData.dev,
       };
-      const { data: responseName } = await axios.post(
-        `${url}/wedding_v1`,
-        nameData,
-        {
-          headers: {
-            Accept: "application/json, text/plain, */*",
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      const { data: responsePartner } = await axios.post(
-        `${url}/wedding_v1`,
-        partnerData,
-        {
-          headers: {
-            Accept: "application/json, text/plain, */*",
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const { data: responseName } = await axios.post(`${url}/wedding_v1`, nameData, {
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+      });
+      const { data: responsePartner } = await axios.post(`${url}/wedding_v1`, partnerData, {
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+      });
 
       const messageModel = (FormData: FormType) => {
         let messageTG = `КИМ: <b>${FormData.name}</b>\n`;
@@ -70,20 +68,14 @@ const FormGuest = () => {
       localStorage.setItem("name", JSON.stringify(FormData));
       localStorage.setItem("show", JSON.stringify(true));
       window.location.reload();
-      console.log(responseName);
       setStar(responseName);
     } catch (e) {
       console.error(e);
     }
   };
 
-  console.log(show);
-  console.log(user);
-
   if (show) {
-    return (
-      <> </>
-    );
+    return <></>;
   }
 
   return (
