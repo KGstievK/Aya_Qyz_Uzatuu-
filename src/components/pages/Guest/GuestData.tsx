@@ -1,15 +1,16 @@
-"use client"
+"use client";
 import { FC, useEffect, useState } from "react";
 import scss from "./Guest.module.scss";
 import axios from "axios";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { delet, edit } from "@/components/icons";
+import * as XLSX from "xlsx";
 
 interface guestType {
   _id?: number;
   name?: string;
-  dev?: string;
   partner?: string;
+  dev?: string;
   comment?: string;
 }
 
@@ -28,7 +29,7 @@ const GuestData: FC = () => {
     } catch (e) {
       console.error(e);
     }
-  }
+  };
 
   const handleComplete = async (_id: number, isCompleted: boolean) => {
     const updateData = {
@@ -41,7 +42,7 @@ const GuestData: FC = () => {
   const deleteTodo = async (_id: number) => {
     const { data } = await axios.delete(`${url}/wedding_v1/${_id}`);
     setGuests(data);
-  }
+  };
 
   const fetchGuests = async () => {
     try {
@@ -59,11 +60,31 @@ const GuestData: FC = () => {
   const attendingCount = guests.filter(guest => guest.dev === "Приду✅").length;
   const notAttendingCount = guests.filter(guest => guest.dev === "Не смогу❌").length;
 
+  const exportToExcel = () => {
+    const guestsWithNumbers = guests.map((guest, index) => ({
+      ...guest,
+      _id: index + 1,
+    }));
+    const worksheet = XLSX.utils.json_to_sheet(guestsWithNumbers);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Guests");
+    XLSX.writeFile(workbook, "guests.xlsx");
+  };
+
   return (
     <section className={scss.guest}>
       <div className="container">
         <div className={scss.content}>
           <h1>Список Гостей</h1>
+          <button onClick={exportToExcel} style={{
+            marginBottom: "20px",
+            padding: "10px 20px",
+            backgroundColor: "#3067c6",
+            color: "#FFF",
+            border: "none",
+            borderRadius: "5px",
+            cursor: "pointer"
+          }}>Экспорт в Excel</button>
           <div>
             <form onSubmit={handleSubmitEdit(onSubmitEdit)}>
               <table>
@@ -86,38 +107,37 @@ const GuestData: FC = () => {
                               <strong>{index + 1}</strong>
                             </p>
                           </td>
-                            <td>
-                              <input type="text" placeholder="Сиздин аты-жөнүңүз" {...registerEdit("name")} defaultValue={item.name} />
-                            </td>
-                            <td>
-                              <input type="text" placeholder="Жаарыңыздын аты-жөнү" {...registerEdit("partner")} defaultValue={item.partner} />
-                            </td>
-                            <td>
-                              <input type="radio" value="Приду✅" {...registerEdit("dev")} defaultChecked={item.dev === "Приду✅"} /> Приду✅
-                              <input type="radio" value="Не смогу❌" {...registerEdit("dev")} defaultChecked={item.dev === "Не смогу❌"} /> Не смогу❌
-                            </td>
-                            <td style={{
-                              display: "flex", 
-                              alignItems: "flex-start",
-                              flexDirection: "column",
-                              justifyContent: "center",
-                              // gap: "20px"
+                          <td>
+                            <input type="text" placeholder="Сиздин аты-жөнүңүз" {...registerEdit("name")} defaultValue={item.name} />
+                          </td>
+                          <td>
+                            <input type="text" placeholder="Жаарыңыздын аты-жөнү" {...registerEdit("partner")} defaultValue={item.partner} />
+                          </td>
+                          <td>
+                            <input type="radio" value="Приду✅" {...registerEdit("dev")} defaultChecked={item.dev === "Приду✅"} /> Приду✅
+                            <input type="radio" value="Не смогу❌" {...registerEdit("dev")} defaultChecked={item.dev === "Не смогу❌"} /> Не смогу❌
+                          </td>
+                          <td style={{
+                            display: "flex",
+                            alignItems: "flex-start",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                          }}>
+                            <button type={isSubmittingEdit ? "button" : "submit"} style={{
+                              width: "100px",
+                              height: "30px",
+                              backgroundColor: '#3067c6',
+                              color: "#FFF"
                             }}>
-                              <button type={isSubmittingEdit ? "button" : "submit" } style={{
-                                width: "100px",
-                                height: "30px",
-                                backgroundColor: '#3067c6',
-                                color: "#FFF"
-                              }}>
-                                {isSubmittingEdit ? "Loading..." : "Сохранить"}
-                              </button>
-                              <button type="button" onClick={() => setEditId(null)}  style={{
-                                width: "100px",
-                                height: "30px",
-                                backgroundColor: '#3067c6',
-                                color: "#FFF"
-                              }}>Отмена</button>
-                            </td>
+                              {isSubmittingEdit ? "Loading..." : "Сохранить"}
+                            </button>
+                            <button type="button" onClick={() => setEditId(null)} style={{
+                              width: "100px",
+                              height: "30px",
+                              backgroundColor: '#3067c6',
+                              color: "#FFF"
+                            }}>Отмена</button>
+                          </td>
                         </>
                       ) : (
                         <>
@@ -142,11 +162,11 @@ const GuestData: FC = () => {
                       )}
                     </tr>
                   ))}
-                    <tr>
-                      <td ><p><strong>Кол-о: {guests.length}</strong></p></td>
-                      <td ><p><strong>Приду✅: {attendingCount}</strong></p></td>
-                      <td ><p><strong>Не смогу❌: {notAttendingCount}</strong></p></td>
-                    </tr>
+                  <tr>
+                    <td><p><strong>Кол-о: {guests.length}</strong></p></td>
+                    <td><p><strong>Приду✅: {attendingCount}</strong></p></td>
+                    <td><p><strong>Не смогу❌: {notAttendingCount}</strong></p></td>
+                  </tr>
                 </tbody>
               </table>
             </form>

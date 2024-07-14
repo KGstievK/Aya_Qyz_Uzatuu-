@@ -8,64 +8,83 @@ import { error } from "console";
 interface FormType {
   _id?: number;
   name?: string;
-  partner?: string
+  partner?: string;
   dev: string;
 }
 
-const TOKEN = process.env.NEXT_PUBLIC_TELEGRAM_TOKEN
-const CHAT_ID = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID
-
+const TOKEN = process.env.NEXT_PUBLIC_TELEGRAM_TOKEN;
+const CHAT_ID = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
 
 const url = process.env.NEXT_PUBLIC_API_URL;
 
 const FormGuest = () => {
-  const [star, setStar] = useState<FormType | null>(null)
+  const show = Boolean(JSON.parse(String(localStorage.getItem("show"))));
+  const user = JSON.parse(String(localStorage.getItem("name")));
+  const [star, setStar] = useState<FormType | null>(null);
   const { register, handleSubmit } = useForm<FormType>({});
   const onSubmit: SubmitHandler<FormType> = async (FormData) => {
     try {
       const nameData = {
         id: FormData._id,
         name: FormData.name,
-        dev: FormData.dev
-      }
+        dev: FormData.dev,
+      };
       const partnerData = {
         id: FormData._id,
         partner: FormData.partner,
-        dev: FormData.dev
-      }
-      const { data: responseName } = await axios.post(`${url}/wedding_v1`, nameData, {
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-        },
-      });
-      const { data: responsePartner } = await axios.post(`${url}/wedding_v1`, partnerData, {
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-        },
-      });
+        dev: FormData.dev,
+      };
+      const { data: responseName } = await axios.post(
+        `${url}/wedding_v1`,
+        nameData,
+        {
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const { data: responsePartner } = await axios.post(
+        `${url}/wedding_v1`,
+        partnerData,
+        {
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       const messageModel = (FormData: FormType) => {
-        let messageTG = `КИМ: <b>${FormData.name}</b>\n`
-        messageTG += `ЖААРЫ: <b>${FormData.partner}</b>\n`
-        messageTG += `ТАКТОО: <b>${FormData.dev}</b>\n`
-        return messageTG
-      }
-      const message = messageModel(FormData)
-    await axios.post(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
-      chat_id: CHAT_ID,
-      parse_mode: "html",
-      text: message
-    });
+        let messageTG = `КИМ: <b>${FormData.name}</b>\n`;
+        messageTG += `ЖААРЫ: <b>${FormData.partner}</b>\n`;
+        messageTG += `ТАКТОО: <b>${FormData.dev}</b>\n`;
+        return messageTG;
+      };
+      const message = messageModel(FormData);
+      await axios.post(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+        chat_id: CHAT_ID,
+        parse_mode: "html",
+        text: message,
+      });
+      localStorage.setItem("name", JSON.stringify(FormData));
+      localStorage.setItem("show", JSON.stringify(true));
       window.location.reload();
       console.log(responseName);
-      setStar(responseName)  
+      setStar(responseName);
     } catch (e) {
       console.error(e);
-      
     }
   };
+
+  console.log(show);
+  console.log(user);
+
+  if (show) {
+    return (
+      <> </>
+    );
+  }
 
   return (
     <section className={scss.FormGuest}>
