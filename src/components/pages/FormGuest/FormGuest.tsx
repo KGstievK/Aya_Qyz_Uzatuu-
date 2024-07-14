@@ -12,6 +12,10 @@ interface FormType {
   dev: string;
 }
 
+const TOKEN = process.env.NEXT_PUBLIC_TELEGRAM_TOKEN
+const CHAT_ID = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID
+
+
 const url = process.env.NEXT_PUBLIC_API_URL;
 
 const FormGuest = () => {
@@ -41,7 +45,19 @@ const FormGuest = () => {
           "Content-Type": "application/json",
         },
       });
-      
+
+      const messageModel = (FormData: FormType) => {
+        let messageTG = `КИМ: <b>${FormData.name}</b>\n`
+        messageTG += `ЖААРЫ: <b>${FormData.partner}</b>\n`
+        messageTG += `ТАКТОО: <b>${FormData.dev}</b>\n`
+        return messageTG
+      }
+      const message = messageModel(FormData)
+    await axios.post(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+      chat_id: CHAT_ID,
+      parse_mode: "html",
+      text: message
+    });
       window.location.reload();
       console.log(responseName);
       setStar(responseName)  
