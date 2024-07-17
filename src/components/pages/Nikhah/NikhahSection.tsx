@@ -130,7 +130,7 @@ const NikhahSection = () => {
               placeholder="Жаарыңыздын аты-жөнү"
               {...register("partner", { required: false })}
             />
-            <button type="submit">ЖӨНӨТҮҮ</button>
+            <button type="submit">Отправить</button>
           </form>
           <p>
             КАДЫРЛУУ КОНОГУБУЗ СИЗДЕРДИ УУЛУБУЗ КУДАЙБЕРГЕН КЕЛИНИБИЗ БУРУЛДУН ҮЙЛӨНҮҮ ТОЮНУНУН ЧАКЫРАБЫЗ
