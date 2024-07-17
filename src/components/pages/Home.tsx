@@ -14,7 +14,7 @@ const Home = () => {
       <Welcome />
       <NikhahSection/>
       <Timer/>
-      <FormGuest/>
+      {/* <FormGuest/> */}
       <Gps/>
       <Map/>
       <Dad/>

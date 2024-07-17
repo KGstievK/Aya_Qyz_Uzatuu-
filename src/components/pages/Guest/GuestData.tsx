@@ -57,8 +57,8 @@ const GuestData: FC = () => {
     fetchGuests();
   }, []);
 
-  const attendingCount = guests.filter(guest => guest.dev === "Приду✅").length;
-  const notAttendingCount = guests.filter(guest => guest.dev === "Не смогу❌").length;
+  // const attendingCount = guests.filter(guest => guest.dev === "Приду✅").length;
+  // const notAttendingCount = guests.filter(guest => guest.dev === "Не смогу❌").length;
 
   const exportToExcel = () => {
     const guestsWithNumbers = guests.map((guest, index) => ({
@@ -114,8 +114,8 @@ const GuestData: FC = () => {
                             <input type="text" placeholder="Жаарыңыздын аты-жөнү" {...registerEdit("partner")} defaultValue={item.partner} />
                           </td>
                           <td>
-                            <input type="radio" value="Приду✅" {...registerEdit("dev")} defaultChecked={item.dev === "Приду✅"} /> Приду✅
-                            <input type="radio" value="Не смогу❌" {...registerEdit("dev")} defaultChecked={item.dev === "Не смогу❌"} /> Не смогу❌
+                            {/* <input type="radio" value="Приду✅" {...registerEdit("dev")} defaultChecked={item.dev === "Приду✅"} /> Приду✅
+                            <input type="radio" value="Не смогу❌" {...registerEdit("dev")} defaultChecked={item.dev === "Не смогу❌"} /> Не смогу❌ */}
                           </td>
                           <td style={{
                             display: "flex",
@@ -146,8 +146,9 @@ const GuestData: FC = () => {
                               <strong>{index + 1}</strong>
                             </p>
                           </td>
-                          <td><p>{item.name || item.partner}</p></td>
-                          <td><p>{item.dev}</p></td>
+                          <td><p>{item.name}</p></td>
+                          <td>{<p>{item.partner}</p>}</td>
+
                           <td style={{
                             display: "flex", alignItems: "center", justifyContent: "center", gap: "10px"
                           }}>
@@ -164,8 +165,8 @@ const GuestData: FC = () => {
                   ))}
                   <tr>
                     <td><p><strong>Кол-о: {guests.length}</strong></p></td>
-                    <td><p><strong>Приду✅: {attendingCount}</strong></p></td>
-                    <td><p><strong>Не смогу❌: {notAttendingCount}</strong></p></td>
+                    {/* <td><p><strong>Приду✅: {attendingCount}</strong></p></td>
+                    <td><p><strong>Не смогу❌: {notAttendingCount}</strong></p></td> */}
                   </tr>
                 </tbody>
               </table>

@@ -95,7 +95,7 @@ const FormGuest = () => {
               placeholder="Жаарыңыздын аты-жөнү"
               {...register("partner", { required: false })}
             />
-            <p>ТАКТОО</p>
+            {/* <p>ТАКТОО</p>
             <div className={scss.radio}>
               <input
                 type="radio"
@@ -111,7 +111,7 @@ const FormGuest = () => {
                 {...register("dev", { required: true })}
               />
               <p>КЕЛЕ АЛБАЙМ</p>
-            </div>
+            </div> */}
             <button type="submit">ЖӨНӨТҮҮ</button>
           </form>
         </div>
