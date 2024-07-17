@@ -76,7 +76,7 @@ const NikhahSection = () => {
         <div className={scss.content}>
           <h1>УРМАТТУУ</h1>
           <p>
-          {user?.name?.toUpperCase()} {user?.partner && user?.name !== undefined ? "ЖАНА" : null } {user?.partner?.toUpperCase()} СИЗДЕРДИ УУЛУБУЗ КУДАЙБЕРГЕН КЕЛИНИБИЗ БУРУЛДУН ҮЙЛӨНҮҮ ТОЮНУНУН ЧАКЫРАБЫЗ
+          {user?.name?.toUpperCase()} {user?.partner && user?.name !== undefined ? "ЖАНА" : null } {user?.partner?.toUpperCase()} СИЗДЕРДИ УУЛУБУЗ КУДАЙБЕРГЕН КЕЛИНИБИЗ БУРУЛДУН ҮЙЛӨНҮҮ ТОЮНА ЧАКЫРАБЫЗ
           </p>
           <div className={scss.name}>
             <Image className={scss.img} priority src={floral1} alt='flora-1'/>
@@ -133,7 +133,7 @@ const NikhahSection = () => {
             <button type="submit">Отправить</button>
           </form>
           <p>
-            КАДЫРЛУУ КОНОГУБУЗ СИЗДЕРДИ УУЛУБУЗ КУДАЙБЕРГЕН КЕЛИНИБИЗ БУРУЛДУН ҮЙЛӨНҮҮ ТОЮНУНУН ЧАКЫРАБЫЗ
+            КАДЫРЛУУ КОНОГУБУЗ СИЗДЕРДИ УУЛУБУЗ КУДАЙБЕРГЕН КЕЛИНИБИЗ БУРУЛДУН ҮЙЛӨНҮҮ ТОЮНА ЧАКЫРАБЫЗ
           </p>
           <div className={scss.name}>
             <Image className={scss.img} priority src={floral1} alt='flora-1'/>
