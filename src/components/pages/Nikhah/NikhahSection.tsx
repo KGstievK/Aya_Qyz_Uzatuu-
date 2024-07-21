@@ -22,6 +22,9 @@ const url = process.env.NEXT_PUBLIC_API_URL;
 
 const devs = [
   {
+    dev: "---ТАМДАҢЫЗ---"
+  },
+  {
     dev: "Кудалар"
   },
   {
@@ -168,8 +171,10 @@ const NikhahSection = () => {
             />
             <select {...register("dev")}>
             {
-              devs.map((item) => (
+              devs.map((item, idx) => (
+                <>
                   <option value={item.dev}>{item.dev}</option>
+                </>
               ))
             }
             </select>

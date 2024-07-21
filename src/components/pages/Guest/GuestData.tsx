@@ -177,22 +177,6 @@ const GuestData: FC = () => {
               </table>
             </form>
             <table>
-              {/* <thead>
-                <tr>
-                  <th><p><strong>Кол-о:</strong></p></th>
-                  <th><p><strong>Кудалар:</strong></p></th>
-                  <th><p><strong>Туугандар:</strong></p></th>
-                  <th><p><strong>Тайкелер: </strong></p></th>
-                  <th><p><strong>Өкүл Ата, Өкүл Апа:</strong></p></th>
-                  <th><p><strong>Жезде, Эже, Кыздар, Күйө балдар:</strong></p></th>
-                  <th><p><strong>Бөлөлөр:</strong></p></th>
-                  <th><p><strong>Жекжат Дос Аяш:</strong></p></th>
-                  <th><p><strong>Коллегалар:</strong></p></th>
-                  <th><p><strong>Кошуналар:</strong></p></th>
-                  <th><p><strong>Бала, келиндин достору:</strong></p></th>
-                  <th><p><strong>Катташ асылдар:</strong></p></th>
-                </tr>
-              </thead> */}
               <thead>
                 <tr>
                   <th><p><strong>Кол-о:</strong></p></th>
