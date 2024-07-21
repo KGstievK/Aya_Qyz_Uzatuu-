@@ -31,6 +31,20 @@
         background: transparent;
         outline: none;
       }
+      select {
+        width: 100%;
+        font-size: 16px;
+        border: none;
+        border-bottom: 2px solid #364d65;
+        padding: 10px 5px;
+        background: transparent;
+        outline: none;
+        option {
+          font-size: 16px;
+          padding: 10px 5px;
+        }
+      }
+
       button {
         position: relative;
         background-color: #364d65;

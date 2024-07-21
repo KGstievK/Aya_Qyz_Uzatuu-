@@ -57,8 +57,17 @@ const GuestData: FC = () => {
     fetchGuests();
   }, []);
 
-  // const attendingCount = guests.filter(guest => guest.dev === "Приду✅").length;
-  // const notAttendingCount = guests.filter(guest => guest.dev === "Не смогу❌").length;
+  const attendingCount = guests.filter(guest => guest.dev === "Кудалар").length;
+  const notAttendingCount = guests.filter(guest => guest.dev === "Туугандар").length;
+  const taykeler = guests.filter(guest => guest.dev === "Тайкелер").length;
+  const okulAtaApa = guests.filter(guest => guest.dev === "Өкүл Ата, Өкүл Апа").length;
+  const jezdeEje = guests.filter(guest => guest.dev === "Жезде, Эже, Кыздар, Күйө балдар").length;
+  const bololor = guests.filter(guest => guest.dev === "Бөлөлөр").length;
+  const jekjatDosAyash = guests.filter(guest => guest.dev === "Жекжат Дос Аяш").length;
+  const kollega = guests.filter(guest => guest.dev === "Коллегалар").length;
+  const koshunalar = guests.filter(guest => guest.dev === "Кошуналар").length;
+  const BalaKelin = guests.filter(guest => guest.dev === "Бала, келиндин достору").length;
+  const Asyldar = guests.filter(guest => guest.dev === "Катташ асылдар").length;
 
   const exportToExcel = () => {
     const guestsWithNumbers = guests.map((guest, index) => ({
@@ -92,7 +101,8 @@ const GuestData: FC = () => {
                   <tr>
                     <th><h2>№</h2></th>
                     <th><h2>Имя</h2></th>
-                    <th><h2>Определение</h2></th>
+                    <th><h2>Партнёр</h2></th>
+                    <th><h2>Кто</h2></th>
                     <th><h2>{editId !== null ? "Действия" : "Кнопки"}</h2></th>
                     {editId !== null ? <th><h2>Кнопки</h2></th> : ''}
                   </tr>
@@ -148,7 +158,7 @@ const GuestData: FC = () => {
                           </td>
                           <td><p>{item.name}</p></td>
                           <td>{<p>{item.partner}</p>}</td>
-
+                          <td><p>{item.dev}</p></td>
                           <td style={{
                             display: "flex", alignItems: "center", justifyContent: "center", gap: "10px"
                           }}>
@@ -163,14 +173,75 @@ const GuestData: FC = () => {
                       )}
                     </tr>
                   ))}
-                  <tr>
-                    <td><p><strong>Кол-о: {guests.length}</strong></p></td>
-                    {/* <td><p><strong>Приду✅: {attendingCount}</strong></p></td>
-                    <td><p><strong>Не смогу❌: {notAttendingCount}</strong></p></td> */}
-                  </tr>
                 </tbody>
               </table>
             </form>
+            <table>
+              {/* <thead>
+                <tr>
+                  <th><p><strong>Кол-о:</strong></p></th>
+                  <th><p><strong>Кудалар:</strong></p></th>
+                  <th><p><strong>Туугандар:</strong></p></th>
+                  <th><p><strong>Тайкелер: </strong></p></th>
+                  <th><p><strong>Өкүл Ата, Өкүл Апа:</strong></p></th>
+                  <th><p><strong>Жезде, Эже, Кыздар, Күйө балдар:</strong></p></th>
+                  <th><p><strong>Бөлөлөр:</strong></p></th>
+                  <th><p><strong>Жекжат Дос Аяш:</strong></p></th>
+                  <th><p><strong>Коллегалар:</strong></p></th>
+                  <th><p><strong>Кошуналар:</strong></p></th>
+                  <th><p><strong>Бала, келиндин достору:</strong></p></th>
+                  <th><p><strong>Катташ асылдар:</strong></p></th>
+                </tr>
+              </thead> */}
+              <thead>
+                <tr>
+                  <th><p><strong>Кол-о:</strong></p></th>
+                  <th><p><strong>Кудалар:</strong></p></th>
+                  <th><p><strong>Туугандар:</strong></p></th>
+                  <th><p><strong>Тайкелер: </strong></p></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><p><strong>{guests.length}</strong></p></td>
+                  <td><p><strong>{attendingCount}</strong></p></td>
+                  <td><p><strong>{notAttendingCount}</strong></p></td>
+                  <td><p><strong>{taykeler}</strong></p></td>
+                </tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th><p><strong>Өкүл Ата, Өкүл Апа:</strong></p></th>
+                  <th><p><strong>Жезде, Эже, Кыздар, Күйө балдар:</strong></p></th>
+                  <th><p><strong>Бөлөлөр:</strong></p></th>
+                  <th><p><strong>Жекжат Дос Аяш:</strong></p></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><p><strong>{okulAtaApa}</strong></p></td>
+                  <td><p><strong>{jezdeEje}</strong></p></td>
+                  <td><p><strong>{bololor}</strong></p></td>
+                  <td><p><strong>{jekjatDosAyash}</strong></p></td>
+                </tr>
+              </tbody>
+              <thead>
+                <tr>
+                  <th><p><strong>Коллегалар:</strong></p></th>
+                  <th><p><strong>Кошуналар:</strong></p></th>
+                  <th><p><strong>Бала, келиндин достору:</strong></p></th>
+                  <th><p><strong>Катташ асылдар:</strong></p></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><p><strong>{kollega}</strong></p></td>
+                  <td><p><strong>{koshunalar}</strong></p></td>
+                  <td><p><strong>{BalaKelin}</strong></p></td>
+                  <td><p><strong>{Asyldar}</strong></p></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

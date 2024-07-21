@@ -17,6 +17,7 @@
       font-size: clamp(24px, 2vw, 36px);
     }
     form {
+      margin: 50px;
       table {
       width: 100%;
       border-collapse: collapse;
@@ -72,5 +73,44 @@
         }
       }
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      thead {
+        th {
+          padding: clamp(5px, 2vw, 10px);
+          border: 1px solid gray;
+          h2 {
+            font-size: clamp(14px, 3vw, 18px);
+          }
+        }
+        td {
+            p {
+            font-size: clamp(14px, 2vw, 18px);
+          }
+        }
+      }
+      tbody {
+        width: 100%;
+        margin-bottom: 20px;
+        tr {
+          width: 100%;
+          
+          td {
+            // width: 100%;
+            height: 10px;
+            border: 1px solid grey;
+            padding: 0;
+            }
+            p {
+              font-size: clamp(14px, 2vw, 20px);
+              margin: clamp(5px, 2vw, 10px);
+              strong {
+                font-style: italic;
+              }
+            }
+          }
+        }
+      }
   }
 }
