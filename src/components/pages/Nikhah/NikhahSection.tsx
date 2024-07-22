@@ -22,7 +22,7 @@ const url = process.env.NEXT_PUBLIC_API_URL;
 
 const devs = [
   {
-    dev: "---ТАМДАҢЫЗ---"
+    dev: "---ТАҢДАҢЫЗ---"
   },
   {
     dev: "Кудалар"
