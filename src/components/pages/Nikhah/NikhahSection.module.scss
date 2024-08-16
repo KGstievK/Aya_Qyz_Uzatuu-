@@ -8,7 +8,8 @@
 .NikhahSection {
   width: 100%;
   height: auto;
-  padding: clamp(15px, 2vw, 30px);
+  // padding-top: clamp(15px, 2vw, 30px);
+  padding: clamp(15px, 2vw, 30px) clamp(15px, 2vw, 30px) 0 clamp(15px, 2vw, 30px);
   background-color: #9c9898;
   color: #e8e9e3;
   .content {
@@ -17,7 +18,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    border: clamp(1px, 100vw, 5px) solid #e8e9e3;
+    border-top: clamp(1px, 100vw, 5px) solid #e8e9e3;;
     padding: clamp(10px, 2vw, 25px);
     form {
       position: relative;

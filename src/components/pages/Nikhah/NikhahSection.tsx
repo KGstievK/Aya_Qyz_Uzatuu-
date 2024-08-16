@@ -157,7 +157,7 @@ const NikhahSection = () => {
       <div className="container">
         <div className={scss.content}>
           <h1>УРМАТТУУ КОНОКТОР</h1>
-          <form action="" onSubmit={handleSubmit(onSubmit)}>
+          {/* <form action="" onSubmit={handleSubmit(onSubmit)}>
             <input
               type="text"
               placeholder="Сиздин аты-жөнүңүз"
@@ -178,7 +178,7 @@ const NikhahSection = () => {
             }
             </select>
             <button type="submit">Отправить</button>
-          </form>
+          </form> */}
           <p>
           СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ НЕСТАН-ДАРЕЖАНДЫН КЫЗ УЗАТУУ ТОЮНА АРНАЛГАН АК ДАСТАРКОНКБУЗДУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ
           </p>

@@ -2,12 +2,14 @@
   width: 100%;
   height: auto;
   background-color: #9c9898;
-  color: #FFF;
-  padding: clamp(15px, 2vw, 30px);
+  color: #fff;
+  padding-bottom: clamp(15px, 2vw, 30px);
+  padding: 0 clamp(15px, 2vw, 30px) clamp(15px, 2vw, 30px)  ;
   .content {
+    border-bottom: clamp(1px, 100vw, 5px) solid #e8e9e3;
     @font-face {
-      font-family: 'Andantino-script' ;
-      src: url('../../../assets/Fonts/ofont.ru_Andantino_script.ttf');
+      font-family: "Andantino-script";
+      src: url("../../../assets/Fonts/ofont.ru_Andantino_script.ttf");
       font-weight: 400;
       font-style: italic;
     }
@@ -16,14 +18,14 @@
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-     p {
+    p {
       max-width: 600px;
       width: 100%;
       font-size: clamp(16px, 3vw, 24px);
       text-align: center;
     }
     h2 {
-      font-family: 'Andantino-script';
+      font-family: "Andantino-script";
       font-size: clamp(30px, 5vw, 74px);
       font-weight: 350;
     }
