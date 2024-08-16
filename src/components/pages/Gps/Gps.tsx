@@ -5,9 +5,13 @@ const Gps = () => {
     <section className={scss.Gps}>
       <div className="container">
         <div className={scss.content}>
-          <h1>ДАРЕГИ:</h1>
-          <p>ТАЛАС ШААРЫ, ЧЫНГЫЗ АЙТМАТОВ КӨЧӨСҮ, 246</p>
+          <div className={scss.line}></div>
+          <h1>ДАРЕГИ</h1>
+          <div className={scss.line}></div>
         </div>
+          <h1>ТАЛАС BANQUENT HALL</h1>
+          <p>РЕСТОРАНЫ</p>
+          <p>ТАЛАС ШААРЫ, ЧЫНГЫЗ АЙТМАТОВ КӨЧӨСҮ, 246</p>
       </div>
     </section>
   )

@@ -13,10 +13,10 @@ const Home = () => {
     <div>
       <Welcome />
       <NikhahSection/>
-      <Timer/>
+      {/* <Timer/> */}
       {/* <FormGuest/> */}
       <Gps/>
-      <Map/>
+      {/* <Map/> */}
       <Dad/>
     </div>
 

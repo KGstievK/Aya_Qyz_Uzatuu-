@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 const oswald = Oswald({ subsets: ["latin"] });
 const bodoni_Moda = Bodoni_Moda({ subsets: ["latin"] });
 
+
 interface FormType {
   _id?: number;
   name?: string;
@@ -115,21 +116,19 @@ const NikhahSection = () => {
         <div className={scss.content}>
           <h1>УРМАТТУУ</h1>
           <p>
-          {user?.name?.toUpperCase()} {user?.partner && user?.name !== undefined ? "ЖАНА" : null } {user?.partner?.toUpperCase()} СИЗДЕРДИ УУЛУБУЗ КУДАЙБЕРГЕН КЕЛИНИБИЗ БУРУЛДУН ҮЙЛӨНҮҮ ТОЮНА ЧАКЫРАБЫЗ
+          {user?.name?.toUpperCase()} {user?.partner && user?.name !== undefined ? "ЖАНА" : null } {user?.partner?.toUpperCase()} СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ НЕСТАН-ДАРЕЖАНДЫН КЫЗ УЗАТУУ ТОЮНА АРНАЛГАН АК ДАСТАРКОНКБУЗДУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ
           </p>
           <div className={scss.name}>
             <Image className={scss.img} priority src={floral1} alt='flora-1'/>
             <div className={scss.we}>
-              <h1>Кудайберген</h1>
-              <p className={bodoni_Moda.className}>&</p>
-              <h1>Бурул</h1>
+              <h1>Нестан-Дарежан</h1>
               <div className={scss.date}>
                 <h2 className={oswald.className}>АВГУСТ</h2>
                 <div className={scss.day}>
                 <h3 className={oswald.className}>8</h3>
                 <p className={oswald.className}>2024</p>
                 </div>
-                <h2 className={oswald.className}>БЕЙШЕМБИ</h2>
+                <h2 className={oswald.className}>ЖЕКШЕМБИ</h2>
               </div>
             </div>
             <Image className={scss.img} src={floral2} alt='flora-1'/>
@@ -137,12 +136,12 @@ const NikhahSection = () => {
           <div className={scss.name}>
             <div className={scss.we}>
               <div className={scss.dateCopy}>
-                <h2 className={oswald.className}>АВГУСТ</h2>
+                <h2 className={oswald.className}>СЕНТЯБРЬ</h2>
                 <div className={scss.day}>
                 <h3 className={oswald.className}>8</h3>
                 <p className={oswald.className}>2024</p>
                 </div>
-                <h2 className={oswald.className}>БЕЙШЕМБИ</h2>
+                <h2 className={oswald.className}>ЖЕКШЕМБИ</h2>
               </div>
             </div>
           </div>
@@ -157,7 +156,7 @@ const NikhahSection = () => {
     <section className={scss.NikhahSection}>
       <div className="container">
         <div className={scss.content}>
-          <h1>УРМАТТУУ</h1>
+          <h1>УРМАТТУУ КОНОКТОР</h1>
           <form action="" onSubmit={handleSubmit(onSubmit)}>
             <input
               type="text"
@@ -181,21 +180,21 @@ const NikhahSection = () => {
             <button type="submit">Отправить</button>
           </form>
           <p>
-            КАДЫРЛУУ КОНОГУБУЗ СИЗДЕРДИ УУЛУБУЗ КУДАЙБЕРГЕН КЕЛИНИБИЗ БУРУЛДУН ҮЙЛӨНҮҮ ТОЮНА ЧАКЫРАБЫЗ
+          СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ НЕСТАН-ДАРЕЖАНДЫН КЫЗ УЗАТУУ ТОЮНА АРНАЛГАН АК ДАСТАРКОНКБУЗДУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ
           </p>
           <div className={scss.name}>
             <Image className={scss.img} priority src={floral1} alt='flora-1'/>
             <div className={scss.we}>
-              <h1>Кудайберген</h1>
-              <p className={bodoni_Moda.className}>&</p>
-              <h1>Бурул</h1>
+              <h1>Нестан-Дарежан</h1>
+              <p className={bodoni_Moda.className}></p>
+              {/* <h1></h1> */}
               <div className={scss.date}>
-                <h2 className={oswald.className}>АВГУСТ</h2>
+                <h2 className={oswald.className}>СЕНТЯБРЬ</h2>
                 <div className={scss.day}>
                 <h3 className={oswald.className}>8</h3>
                 <p className={oswald.className}>2024</p>
                 </div>
-                <h2 className={oswald.className}>БЕЙШЕМБИ</h2>
+                <h2 className={oswald.className}>ЖЕКШЕМБИ</h2>
               </div>
             </div>
             <Image className={scss.img} src={floral2} alt='flora-1'/>
@@ -203,16 +202,15 @@ const NikhahSection = () => {
           <div className={scss.name}>
             <div className={scss.we}>
               <div className={scss.dateCopy}>
-                <h2 className={oswald.className}>АВГУСТ</h2>
+                <h2 className={oswald.className}>СЕНТЯБРЬ</h2>
                 <div className={scss.day}>
                 <h3 className={oswald.className}>8</h3>
                 <p className={oswald.className}>2024</p>
                 </div>
-                <h2 className={oswald.className}>БЕЙШЕМБИ</h2>
+                <h2 className={oswald.className}>ЖЕКШЕМБИ</h2>
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </section>

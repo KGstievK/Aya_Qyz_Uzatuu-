@@ -22,7 +22,7 @@ const Timer: React.FC = () => {
     seconds: 0,
   });
 
-  const targetDate = new Date("2024-08-08T17:00:00"); // Замените на вашу целевую дату и время
+  const targetDate = new Date("2024-09-08T17:00:00"); // Замените на вашу целевую дату и время
 
   const updateTimer = () => {
     const now = new Date();
