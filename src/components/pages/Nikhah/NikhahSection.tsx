@@ -122,8 +122,10 @@ const NikhahSection = () => {
             <Image className={scss.img} priority src={floral1} alt='flora-1'/>
             <div className={scss.we}>
               <h1>Нестан-Дарежан</h1>
+              <p className={bodoni_Moda.className}></p>
+              <h1 className={oswald.className}>Кыз узатуу</h1>
               <div className={scss.date}>
-                <h2 className={oswald.className}>АВГУСТ</h2>
+                <h2 className={oswald.className}>СЕНТЯБРЬ</h2>
                 <div className={scss.day}>
                 <h3 className={oswald.className}>8</h3>
                 <p className={oswald.className}>2024</p>
@@ -187,7 +189,7 @@ const NikhahSection = () => {
             <div className={scss.we}>
               <h1>Нестан-Дарежан</h1>
               <p className={bodoni_Moda.className}></p>
-              {/* <h1></h1> */}
+              <h1 className={oswald.className}>Кыз узатуу</h1>
               <div className={scss.date}>
                 <h2 className={oswald.className}>СЕНТЯБРЬ</h2>
                 <div className={scss.day}>
