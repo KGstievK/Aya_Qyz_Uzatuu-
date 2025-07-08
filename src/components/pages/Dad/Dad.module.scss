@@ -6,8 +6,10 @@
   color: #fff;
   padding-bottom: clamp(15px, 2vw, 30px);
   padding: 0 clamp(15px, 2vw, 30px) clamp(15px, 2vw, 30px);
+
   .content {
     border-bottom: clamp(1px, 100vw, 5px) solid #e8e9e3;
+    padding-top: 30px;
     @font-face {
       font-family: "Andantino-script";
       src: url("../../../assets/Fonts/ofont.ru_Andantino_script.ttf");

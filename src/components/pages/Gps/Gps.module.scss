@@ -36,7 +36,7 @@
   }
   h1 {
     width: 100%;
-    font-size: clamp(20px, 3vw, 44px);
+    font-size: clamp(35px, 3vw, 44px);
     font-weight: 550;
     text-align: center;
     padding-top: 25px;
@@ -48,7 +48,7 @@
     font-size: clamp(16px, 3vw, 24px);
     text-align: center;
     margin: 0px auto;
-    padding-top: 25px;
+    padding-top: 15px;
     filter: drop-shadow(2px 2px 2px #1f1f1f);
   }
 }

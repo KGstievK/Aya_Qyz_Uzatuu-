@@ -9,7 +9,7 @@ const Gps = () => {
           <h1>ДАРЕГИ</h1>
           <div className={scss.line}></div>
         </div>
-          <h1>ТАЛАС BANQUENT HALL</h1>
+          <h1>АЛА-ТОО</h1>
           <p>РЕСТОРАНЫ</p>
           <p>ТАЛАС ШААРЫ, ЧЫНГЫЗ АЙТМАТОВ КӨЧӨСҮ, 246</p>
       </div>
