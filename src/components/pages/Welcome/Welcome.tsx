@@ -25,9 +25,9 @@ const Welcome: FC = () => {
         <div className={scss.content}>
           <div className={scss.We}>
             <div className={scss.We_name}>
+              <h1>01</h1>
               <h1>08</h1>
-              <h1>09</h1>
-              <h1>24</h1>
+              <h1>25</h1>
               <h2>ЧАКЫРУУ</h2>
             </div>
           </div>
