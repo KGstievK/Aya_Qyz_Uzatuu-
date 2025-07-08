@@ -1,26 +1,30 @@
-"use client"
-import { SetStateAction } from "react"
-import Dad from "./Dad/Dad"
-import FormGuest from "./FormGuest/FormGuest"
-import Gps from "./Gps/Gps"
-import Map from "./Map/Map"
-import NikhahSection from "./Nikhah/NikhahSection"
-import Timer from "./Timer/Timer"
-import Welcome from "./Welcome/Welcome"
+"use client";
+import Dad from "./Dad/Dad";
+import Gps from "./Gps/Gps";
+import NikhahSection from "./Nikhah/NikhahSection";
+import Welcome from "./Welcome/Welcome";
 
 const Home = () => {
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage: "url(/assets/back.JPEG)",
+        backgroundSize: "cover", // Растягивает изображение на всю область
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        minHeight: "100%", // Минимальная высота = весь экран
+        width: "100%",
+      }}
+    >
       <Welcome />
-      <NikhahSection/>
+      <NikhahSection />
       {/* <Timer/> */}
       {/* <FormGuest/> */}
-      <Gps/>
+      <Gps />
       {/* <Map/> */}
-      <Dad/>
+      <Dad />
     </div>
+  );
+};
 
-  )
-}
-
-export default Home
+export default Home;

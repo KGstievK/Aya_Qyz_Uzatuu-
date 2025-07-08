@@ -2,15 +2,16 @@
   width: 100%;
   height: auto;
   padding: clamp(15px, 2vw, 30px);
-  background-color: #E8E9E3;
+  background-color: #ffffff;
   color: #364d65;
-  .content, .content1 {
+  .content,
+  .content1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    border: 5px solid #364d65; 
+    border: 5px solid #364d65;
     padding: 60px 0;
     h1 {
       width: 100%;
@@ -58,14 +59,13 @@
         gap: 10px;
         input {
           max-width: 20px;
-          width: 100% ;
+          width: 100%;
           outline: none;
-          border: 2px solid #364d65
-        };
+          border: 2px solid #364d65;
+        }
         p {
           height: 20px;
           padding: 0;
-
         }
       }
       button {
@@ -74,7 +74,7 @@
         height: 50px;
         border: 2px solid #364d65;
         border-radius: 20px;
-        color: #FFF;
+        color: #fff;
         margin: 20px;
       }
     }

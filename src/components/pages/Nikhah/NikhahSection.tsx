@@ -2,12 +2,12 @@ import Image from 'next/image'
 import scss from './NikhahSection.module.scss'
 import floral1 from '@/assets/floral-hand-drawn-ornament-collection_1.svg'
 import floral2 from '@/assets/floral-hand-drawn-ornament-collection_2.svg'
-import { Oswald, Bodoni_Moda } from "next/font/google";
+import name from '@/assets/Vector.svg'
+import { Oswald } from "next/font/google";
 import axios from 'axios';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useEffect, useState } from 'react';
 const oswald = Oswald({ subsets: ["latin"] });
-const bodoni_Moda = Bodoni_Moda({ subsets: ["latin"] });
 
 
 interface FormType {
@@ -116,21 +116,21 @@ const NikhahSection = () => {
         <div className={scss.content}>
           <h1>УРМАТТУУ</h1>
           <p>
-          {user?.name?.toUpperCase()} {user?.partner && user?.name !== undefined ? "ЖАНА" : null } {user?.partner?.toUpperCase()} СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ НЕСТАН-ДАРЕЖАНДЫН КЫЗ УЗАТУУ ТОЮНА АРНАЛГАН АК ДАСТАРКОНКБУЗДУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ
+          {user?.name?.toUpperCase()} {user?.partner && user?.name !== undefined ? "ЖАНА" : null } {user?.partner?.toUpperCase()} СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ А-Я КЫЗ УЗАТУУ ТОЮНА АРНАЛГАН АК ДАСТАРКОНКБУЗДУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ
           </p>
           <div className={scss.name}>
             <Image className={scss.img} priority src={floral1} alt='flora-1'/>
             <div className={scss.we}>
-              <h1>Нестан-Дарежан</h1>
-              <p className={bodoni_Moda.className}></p>
-              <h1 className={oswald.className}>Кыз узатуу</h1>
+              {/* <h1>Нестан-Дарежан</h1>
+              <h1 className={oswald.className}>Кыз узатуу</h1> */}
+              <Image priority src={name}  alt='name'/>
               <div className={scss.date}>
-                <h2 className={oswald.className}>СЕНТЯБРЬ</h2>
+                <h2 className={oswald.className}>АВГУСТ</h2>
                 <div className={scss.day}>
-                <h3 className={oswald.className}>8</h3>
-                <p className={oswald.className}>2024</p>
+                <h3 className={oswald.className}>1</h3>
+                <p className={oswald.className}>2025</p>
                 </div>
-                <h2 className={oswald.className}>ЖЕКШЕМБИ</h2>
+                <h2 className={oswald.className}>ЖУМА</h2>
               </div>
             </div>
             <Image className={scss.img} src={floral2} alt='flora-1'/>
@@ -138,12 +138,12 @@ const NikhahSection = () => {
           <div className={scss.name}>
             <div className={scss.we}>
               <div className={scss.dateCopy}>
-                <h2 className={oswald.className}>СЕНТЯБРЬ</h2>
+                <h2 className={oswald.className}>АВГУСТ</h2>
                 <div className={scss.day}>
-                <h3 className={oswald.className}>8</h3>
-                <p className={oswald.className}>2024</p>
+                <h3 className={oswald.className}>1</h3>
+                <p className={oswald.className}>2025</p>
                 </div>
-                <h2 className={oswald.className}>ЖЕКШЕМБИ</h2>
+                <h2 className={oswald.className}>ЖУМА</h2>
               </div>
             </div>
           </div>
@@ -182,21 +182,22 @@ const NikhahSection = () => {
             <button type="submit">Отправить</button>
           </form> */}
           <p>
-          СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ НЕСТАН-ДАРЕЖАНДЫН КЫЗ УЗАТУУ ТОЮНА АРНАЛГАН АК ДАСТАРКОНКБУЗДУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ
+          СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ А-Я КЫЗ УЗАТУУ ТОЮНА АРНАЛГАН АК ДАСТАРКОНКБУЗДУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ
           </p>
           <div className={scss.name}>
             <Image className={scss.img} priority src={floral1} alt='flora-1'/>
             <div className={scss.we}>
-              <h1>Нестан-Дарежан</h1>
+              {/* <h1>Нестан-Дарежан</h1>
               <p className={bodoni_Moda.className}></p>
-              <h1 className={oswald.className}>Кыз узатуу</h1>
+              <h1 className={oswald.className}>Кыз узатуу</h1> */}
+              <Image priority src={name} alt='name'/>
               <div className={scss.date}>
-                <h2 className={oswald.className}>СЕНТЯБРЬ</h2>
+                <h2 className={oswald.className}>АВГУСТ</h2>
                 <div className={scss.day}>
-                <h3 className={oswald.className}>8</h3>
-                <p className={oswald.className}>2024</p>
+                <h3 className={oswald.className}>1</h3>
+                <p className={oswald.className}>2025</p>
                 </div>
-                <h2 className={oswald.className}>ЖЕКШЕМБИ</h2>
+                <h2 className={oswald.className}>ЖУМА</h2>
               </div>
             </div>
             <Image className={scss.img} src={floral2} alt='flora-1'/>
@@ -204,12 +205,12 @@ const NikhahSection = () => {
           <div className={scss.name}>
             <div className={scss.we}>
               <div className={scss.dateCopy}>
-                <h2 className={oswald.className}>СЕНТЯБРЬ</h2>
+                <h2 className={oswald.className}>АВГУСТ</h2>
                 <div className={scss.day}>
-                <h3 className={oswald.className}>8</h3>
-                <p className={oswald.className}>2024</p>
+                <h3 className={oswald.className}>1</h3>
+                <p className={oswald.className}>2025</p>
                 </div>
-                <h2 className={oswald.className}>ЖЕКШЕМБИ</h2>
+                <h2 className={oswald.className}>ЖУМА</h2>
               </div>
             </div>
           </div>

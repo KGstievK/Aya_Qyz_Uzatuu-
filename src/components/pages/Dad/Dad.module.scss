@@ -1,10 +1,11 @@
 .Dad {
   width: 100%;
   height: auto;
-  background-color: #9c9898;
+  // background-color: #9c9898;
+  background: url("");
   color: #fff;
   padding-bottom: clamp(15px, 2vw, 30px);
-  padding: 0 clamp(15px, 2vw, 30px) clamp(15px, 2vw, 30px)  ;
+  padding: 0 clamp(15px, 2vw, 30px) clamp(15px, 2vw, 30px);
   .content {
     border-bottom: clamp(1px, 100vw, 5px) solid #e8e9e3;
     @font-face {
@@ -23,11 +24,13 @@
       width: 100%;
       font-size: clamp(16px, 3vw, 24px);
       text-align: center;
+      filter: drop-shadow(5px 5px 5px #1f1f1f);
     }
     h2 {
       font-family: "Andantino-script";
       font-size: clamp(30px, 5vw, 74px);
       font-weight: 350;
+      filter: drop-shadow(5px 5px 5px #1f1f1f);
     }
   }
 }
