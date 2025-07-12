@@ -115,9 +115,9 @@ const NikhahSection = () => {
        <div className="container">
         <div className={scss.content}>
          <h1>ЧАКЫРУУ</h1>
-          {/* <p>
-          {user?.name?.toUpperCase()} {user?.partner && user?.name !== undefined ? "ЖАНА" : null } {user?.partner?.toUpperCase()} СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ А-Я КЫЗ УЗАТУУ ТОЮНА АРНАЛГАН АК ДАСТАРКОНКБУЗДУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ
-          </p> */}
+          <p className={scss.GuestName}>
+          {/* {user?.name?.toUpperCase()} {user?.partner && user?.name !== undefined ? "ЖАНА" : null } {user?.partner?.toUpperCase()} СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ А-Я КЫЗ УЗАТУУ ТОЮНА АРНАЛГАН АК ДАСТАРКОНКБУЗДУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ */}
+          </p>
           <div className={scss.name}>
             <Image className={scss.img} priority src={floral1} alt='flora-1'/>
             <div className={scss.we}>
@@ -181,9 +181,9 @@ const NikhahSection = () => {
             </select>
             <button type="submit">Отправить</button>
           </form> */}
-          {/* <p>
-          СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ А-Я КЫЗ УЗАТУУ ТОЮНА АРНАЛГАН АК ДАСТАРКОНКБУЗДУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ
-          </p> */}
+          <p>
+          {/* СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ А-Я КЫЗ УЗАТУУ ТОЮНА АРНАЛГАН АК ДАСТАРКОНКБУЗДУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ */}
+          </p>
           <div className={scss.name}>
             <Image className={scss.img} priority src={floral1} alt='flora-1'/>
             <div className={scss.we}>

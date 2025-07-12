@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div
       style={{
-        backgroundImage: "url(/assets/back.JPEG)",
+        background: "#9c9898",
         backgroundSize: "cover", // Растягивает изображение на всю область
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
