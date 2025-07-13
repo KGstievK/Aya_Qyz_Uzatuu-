@@ -1,14 +1,13 @@
-import Image from 'next/image'
-import scss from './NikhahSection.module.scss'
-import floral1 from '@/assets/floral-hand-drawn-ornament-collection_1.svg'
-import floral2 from '@/assets/floral-hand-drawn-ornament-collection_2.svg'
-import name from '@/assets/Vector.svg'
+import Image from "next/image";
+import scss from "./NikhahSection.module.scss";
+import floral1 from "@/assets/floral-hand-drawn-ornament-collection_1.svg";
+import floral2 from "@/assets/floral-hand-drawn-ornament-collection_2.svg";
+import name from "@/assets/Vector.svg";
 import { Oswald } from "next/font/google";
-import axios from 'axios';
-import { SubmitHandler, useForm } from 'react-hook-form';
-import { useEffect, useState } from 'react';
+import axios from "axios";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { useEffect, useState } from "react";
 const oswald = Oswald({ subsets: ["latin"] });
-
 
 interface FormType {
   _id?: number;
@@ -23,42 +22,42 @@ const url = process.env.NEXT_PUBLIC_API_URL;
 
 const devs = [
   {
-    dev: "---ТАҢДАҢЫЗ---"
+    dev: "---ТАҢДАҢЫЗ---",
   },
   {
-    dev: "Кудалар"
+    dev: "Кудалар",
   },
   {
-    dev: "Туугандар"
+    dev: "Туугандар",
   },
   {
-    dev: "Тайкелер"
+    dev: "Тайкелер",
   },
   {
-    dev: "Өкүл Ата, Өкүл Апа"
+    dev: "Өкүл Ата, Өкүл Апа",
   },
   {
-    dev: "Жезде, Эже, Кыздар, Күйө балдар"
+    dev: "Жезде, Эже, Кыздар, Күйө балдар",
   },
   {
-    dev: "Бөлөлөр"
+    dev: "Бөлөлөр",
   },
   {
-    dev: "Жекжат Дос Аяш."
+    dev: "Жекжат Дос Аяш.",
   },
   {
-    dev: "Коллегалар"
+    dev: "Коллегалар",
   },
   {
-    dev: "Кошуналар"
+    dev: "Кошуналар",
   },
   {
-    dev: "Бала, келиндин достору."
+    dev: "Бала, келиндин достору.",
   },
   {
-    dev: "Катташ асылдар"
+    dev: "Катташ асылдар",
   },
-]
+];
 
 const NikhahSection = () => {
   const [show, setShow] = useState(false);
@@ -79,14 +78,18 @@ const NikhahSection = () => {
         id: FormData._id,
         name: FormData.name,
         partner: FormData.partner,
-        dev: FormData.dev
+        dev: FormData.dev,
       };
-      const { data: responseName } = await axios.post(`${url}/wedding_v1`, nameData, {
-        headers: {
-          Accept: "application/json, text/plain, */*",
-          "Content-Type": "application/json",
-        },
-      });
+      const { data: responseName } = await axios.post(
+        `${url}/wedding_v1`,
+        nameData,
+        {
+          headers: {
+            Accept: "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       const messageModel = (FormData: FormType) => {
         let messageTG = `КИМ: <b>${FormData.name}</b>\n`;
@@ -111,54 +114,63 @@ const NikhahSection = () => {
 
   if (show) {
     return (
-    <section className={scss.NikhahSection}>
-       <div className="container">
-        <div className={scss.content}>
-         <h1>ЧАКЫРУУ</h1>
-          <p className={scss.GuestName}>
-          {/* {user?.name?.toUpperCase()} {user?.partner && user?.name !== undefined ? "ЖАНА" : null } {user?.partner?.toUpperCase()} СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ А-Я КЫЗ УЗАТУУ ТОЮНА АРНАЛГАН АК ДАСТАРКОНКБУЗДУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ */}
-          </p>
-          <div className={scss.name}>
-            <Image className={scss.img} priority src={floral1} alt='flora-1'/>
-            <div className={scss.we}>
-              {/* <h1>Нестан-Дарежан</h1>
+      <section className={scss.NikhahSection}>
+        <div className="container">
+          <div className={scss.content}>
+            <h1>УРМАТТУУ</h1>
+            <p className={scss.GuestName}>
+              {user?.name?.toUpperCase()}{" "}
+              {user?.partner && user?.name !== undefined ? "ЖАНА" : null}{" "}
+              {user?.partner?.toUpperCase()} СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ А-Я КЫЗ
+              УЗАТУУ ТОЮНА АРНАЛГАН АК ДАСТАРКОНКБУЗДУН КАДЫРЛУУ КОНОГУ БОЛУУГА
+              ЧАКЫРАБЫЗ
+            </p>
+            <div className={scss.name}>
+              <Image
+                className={scss.img}
+                priority
+                src={floral1}
+                alt="flora-1"
+              />
+              <div className={scss.we}>
+                {/* <h1>Нестан-Дарежан</h1>
               <h1 className={oswald.className}>Кыз узатуу</h1> */}
-              <Image priority src={name}  alt='name'/>
-              <div className={scss.date}>
-                <h2 className={oswald.className}>АВГУСТ</h2>
-                <div className={scss.day}>
-                <h3 className={oswald.className}>1</h3>
-                <p className={oswald.className}>2025</p>
+                <Image priority src={name} alt="name" />
+                <div className={scss.date}>
+                  <h2 className={oswald.className}>АВГУСТ</h2>
+                  <div className={scss.day}>
+                    <h3 className={oswald.className}>1</h3>
+                    <p className={oswald.className}>2025</p>
+                  </div>
+                  <h2 className={oswald.className}>ЖУМА</h2>
                 </div>
-                <h2 className={oswald.className}>ЖУМА</h2>
+              </div>
+              <Image className={scss.img} src={floral2} alt="flora-1" />
+            </div>
+            <div className={scss.name}>
+              <div className={scss.we}>
+                <div className={scss.dateCopy}>
+                  <h2 className={oswald.className}>АВГУСТ</h2>
+                  <div className={scss.day}>
+                    <h3 className={oswald.className}>1</h3>
+                    <p className={oswald.className}>2025</p>
+                    <p>13:00</p>
+                  </div>
+                  <h2 className={oswald.className}>ЖУМА</h2>
+                </div>
               </div>
             </div>
-            <Image className={scss.img} src={floral2} alt='flora-1'/>
           </div>
-          <div className={scss.name}>
-            <div className={scss.we}>
-              <div className={scss.dateCopy}>
-                <h2 className={oswald.className}>АВГУСТ</h2>
-                <div className={scss.day}>
-                <h3 className={oswald.className}>1</h3>
-                <p className={oswald.className}>2025</p>
-                </div>
-                <h2 className={oswald.className}>ЖУМА</h2>
-              </div>
-            </div>
-          </div>
-          
         </div>
-      </div>
-    </section>
-    )
+      </section>
+    );
   }
 
   return (
     <section className={scss.NikhahSection}>
       <div className="container">
         <div className={scss.content}>
-          <h1>ЧАКЫРУУ</h1>
+          <h1>УРМАТТУУ</h1>
           {/* <form action="" onSubmit={handleSubmit(onSubmit)}>
             <input
               type="text"
@@ -181,34 +193,37 @@ const NikhahSection = () => {
             </select>
             <button type="submit">Отправить</button>
           </form> */}
+
           <p>
-          {/* СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ А-Я КЫЗ УЗАТУУ ТОЮНА АРНАЛГАН АК ДАСТАРКОНКБУЗДУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ */}
+            СИЗДЕРДИ СҮЙҮКТҮҮ КЫЗЫБЫЗ А-Я КЫЗ УЗАТУУ ТОЮНА АРНАЛГАН АК
+            ДАСТАРКОНКБУЗДУН КАДЫРЛУУ КОНОГУ БОЛУУГА ЧАКЫРАБЫЗ
           </p>
           <div className={scss.name}>
-            <Image className={scss.img} priority src={floral1} alt='flora-1'/>
+            <Image className={scss.img} priority src={floral1} alt="flora-1" />
             <div className={scss.we}>
               {/* <h1>Нестан-Дарежан</h1>
               <p className={bodoni_Moda.className}></p>
               <h1 className={oswald.className}>Кыз узатуу</h1> */}
-              <Image priority src={name} alt='name'/>
+              <Image priority src={name} alt="name" />
               <div className={scss.date}>
                 <h2 className={oswald.className}>АВГУСТ</h2>
                 <div className={scss.day}>
-                <h3 className={oswald.className}>1</h3>
-                <p className={oswald.className}>2025</p>
+                  <h3 className={oswald.className}>1</h3>
+                  <p className={oswald.className}>2025</p>
                 </div>
                 <h2 className={oswald.className}>ЖУМА</h2>
               </div>
             </div>
-            <Image className={scss.img} src={floral2} alt='flora-1'/>
+            <Image className={scss.img} src={floral2} alt="flora-1" />
           </div>
           <div className={scss.name}>
             <div className={scss.we}>
               <div className={scss.dateCopy}>
                 <h2 className={oswald.className}>АВГУСТ</h2>
                 <div className={scss.day}>
-                <h3 className={oswald.className}>1</h3>
-                <p className={oswald.className}>2025</p>
+                  <h3 className={oswald.className}>1</h3>
+                  <p className={oswald.className}>2025</p>
+                  <p>13:00</p>
                 </div>
                 <h2 className={oswald.className}>ЖУМА</h2>
               </div>
@@ -217,7 +232,7 @@ const NikhahSection = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default NikhahSection
+export default NikhahSection;
